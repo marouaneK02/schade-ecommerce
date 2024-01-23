@@ -11,7 +11,7 @@ export async function POST(
         const { name } = body;
 
         if(!userId){
-            return new NextResponse("Unauthorised", { status: 401 });
+            return new NextResponse("Unauthenticated", { status: 401 });
         }
 
         if(!name){
