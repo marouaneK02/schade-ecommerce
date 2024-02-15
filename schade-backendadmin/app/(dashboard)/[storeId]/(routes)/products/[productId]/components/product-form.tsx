@@ -30,12 +30,14 @@ interface ProductFormProps{
 
 const formSchema = z.object({
     name: z.string().min(1),
+    description: z.string().min(1),
     images: z.object({ url: z.string() }).array(),
     price: z.coerce.number().min(1),
     categoryId: z.string().min(1),
     colourId: z.string().min(1),
     sizeId: z.string().min(1),
     isFeatured: z.boolean().default(false).optional(),
+    isTrending: z.boolean().default(false).optional(),
     isArchived: z.boolean().default(false).optional(),
 });
 
@@ -64,12 +66,14 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             price: parseFloat(String(initialData?.price)),
         } : {
             name: '',
+            description: '',
             images: [],
             price: 0,
             categoryId: '',
             sizeId: '',
             colourId: '',
             isFeatured: false,
+            isTrending: false,
             isArchived: false,
         },
     });
@@ -148,6 +152,15 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                                 <FormMessage/>
                             </FormItem>
                         )}/>
+                        <FormField control={form.control} name="description" render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Description</FormLabel>
+                                <FormControl>
+                                    <Input disabled={loading} placeholder="Product description" {...field}/>
+                                </FormControl>
+                                <FormMessage/>
+                            </FormItem>
+                        )}/>
                         <FormField control={form.control} name="price" render={({ field }) => (
                             <FormItem>
                                 <FormLabel>Price</FormLabel>
@@ -218,7 +231,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                             </FormItem>
                         )}/>
                         <FormField control={form.control} name="isFeatured" render={({ field }) => (
-                            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 bg-white">
                                 <FormControl>
                                     <Checkbox checked={field.value} onCheckedChange={field.onChange}/>
                                 </FormControl>
@@ -232,8 +245,23 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                                 </div>
                             </FormItem>
                         )}/>
+                        <FormField control={form.control} name="isTrending" render={({ field }) => (
+                            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 bg-white">
+                                <FormControl>
+                                    <Checkbox checked={field.value} onCheckedChange={field.onChange}/>
+                                </FormControl>
+                                <div className="space-y-1 leading-none">
+                                    <FormLabel>
+                                        Trending
+                                    </FormLabel>
+                                    <FormDescription>
+                                        This product will appear on the front page.
+                                    </FormDescription>
+                                </div>
+                            </FormItem>
+                        )}/>
                        <FormField control={form.control} name="isArchived" render={({ field }) => (
-                            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 bg-white">
                                 <FormControl>
                                     <Checkbox checked={field.value} onCheckedChange={field.onChange}/>
                                 </FormControl>

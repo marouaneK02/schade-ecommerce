@@ -86,8 +86,10 @@ model Product{
   categoryId String
   category  Category  @relation("CategoryToProduct", fields: [categoryId], references: [id])
   name      String
+  description String  @db.LongText
   price     Decimal
   isFeatured Boolean  @default(false)
+  isTrending Boolean  @default(false)
   isArchived Boolean  @default(false)
   sizeId    String
   size      Size      @relation(fields: [sizeId], references: [id])

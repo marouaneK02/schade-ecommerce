@@ -34,7 +34,7 @@ const ProductPage = async ({
     });
 
     return(
-        <div className="flex-col">
+        <div className="flex-col h-screen bg-gray-100">
             <div className="flex-1 space-y-4 p-8 pt-6">
                 <ProductForm initialData={product} categories={categories} colours={colours} sizes={sizes}/>
             </div>

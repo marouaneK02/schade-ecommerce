@@ -46,7 +46,6 @@ export async function POST(req: Request){
             },
             include:{
                 orderItems: true,
-
             }
         });
 

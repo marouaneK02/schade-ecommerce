@@ -2,7 +2,6 @@ import getCategory from "@/actions/get-category";
 import getColours from "@/actions/get-colours";
 import getProducts from "@/actions/get-products";
 import getSizes from "@/actions/get-sizes";
-import Billboard from "@/components/billboard";
 import Container from "@/components/ui/container";
 import Filter from "./components/filter";
 import NoResults from "@/components/ui/no-results";
@@ -35,28 +34,28 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
     const category = await getCategory(params.categoryId);
 
     return(
-        <div className="bg-white">
-            <Container>
-                <Billboard data={category.billboard}/>
-                <div className="px-4 sm:px-6 lg:px-8 pb-24">
-                    <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-                        <MobileFilter sizes={sizes} colours={colours} />
-                        <div className="hidden lg:block">
-                            <Filter valueKey="sizeId" name="Sizes" data={sizes}/>
-                            <Filter valueKey="colourId" name="Colours" data={colours}/>
-                        </div>
-                        <div className="mt-6 lg:col-span-4 lg:mt-0">
-                            {products.length === 0 && <NoResults/>}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                {products.map((item) => (
-                                    <ProductCard key={item.id} data={item}/>
-                                ))}
-                            </div>
+        <Container>
+            <div className="py-20 sm:px-5 lg:px-7 pb-24">
+                <div className="mx-auto space-x-4 lg:space-x-6">
+                    <h1 className="text-center py-10 pb-16 text-8xl text-black">{category.name}</h1>
+                </div>
+                <div className="mt-16 lg:grid lg:grid-cols-5 lg:gap-x-8">
+                    <MobileFilter sizes={sizes} colours={colours} />
+                    <div className="hidden lg:block">
+                        <Filter valueKey="sizeId" name="Sizes" data={sizes}/>
+                        <Filter valueKey="colourId" name="Colours" data={colours}/>
+                    </div>
+                    <div className="mt-6 lg:col-span-4 lg:mt-0">
+                        {products.length === 0 && <NoResults/>}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-9">
+                            {products.map((item) => (
+                                <ProductCard key={item.id} data={item}/>
+                            ))}
                         </div>
                     </div>
                 </div>
-            </Container>
-        </div>
+            </div>
+        </Container>
     )
 }
 

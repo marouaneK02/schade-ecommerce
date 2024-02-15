@@ -1,10 +1,10 @@
-import { Inter } from 'next/font/google'
+import { Cairo } from 'next/font/google'
 import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
 import { ModalProvider } from '@/providers/modal-provider'
 import { ToasterProvider } from '@/providers/toast-provider'
 
-const inter = Inter({ subsets: ['latin'] })
+const cairo = Cairo({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Admin Dashboard',
@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>
+        <body className={cairo.className}>
           <ToasterProvider/>
           <ModalProvider/>
           {children}
-          </body>
+        </body>
       </html>
     </ClerkProvider>
   )
