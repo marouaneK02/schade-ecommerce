@@ -12,6 +12,7 @@ Full Stack E-Commerce Store with Content Management System using: Next.js 14 App
 <img align="left" alt="PlanetScale" width="30px" style="padding-right:10px;" src="/toolsIMG/planetscale-seeklogo.svg" />
 <img align="left" alt="Prisma" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" />
 <img align="left" alt="MySQL" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+
 <br />
 
 ## Features
