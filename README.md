@@ -28,7 +28,7 @@ Full Stack E-Commerce Store with Content Management System using: Next.js 14 App
   - Dashboard which allows admin to view orders/sales/revenue of each store.
   - Used Cloudinary to store media such as product images and billboards.
   - Used Clerk Authentication for admin Authentication and Authorisation to ensure the user data remains secure.
-  - Used Stripe checkout and webhooks to automated processes like payment processes and order updates.
+  - Used Stripe checkout and webhooks to automate processes like payment processes and order updates.
   - Used MySQL, Prisma and PlanetScale to ensure efficient data storage and scalability, enabling backend to handle increased loads as the website grows.
 
 For DEMO, use [Stripe Testing Cards](https://stripe.com/docs/testing)
