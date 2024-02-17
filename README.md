@@ -14,8 +14,8 @@ Full Stack E-Commerce Store with Content Management System using: Next.js 14 App
 <img align="left" alt="MySQL" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
 
 <br />
+<br />
 
-#
 
 ## Features
 - Front-End Features:
