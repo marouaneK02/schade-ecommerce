@@ -2,7 +2,6 @@
 
 Full Stack E-Commerce Store with Content Management System using: Next.js 14 App Router, React and Prisma.
 
-<br />
 
 ### Languages and Tools used
 
