@@ -31,6 +31,7 @@ Full Stack E-Commerce Store with Content Management System using: Next.js 14 App
 
 For DEMO, use [Stripe Testing Cards](https://stripe.com/docs/testing)
 
+</br>
 
 ## How to use schade locally
 
