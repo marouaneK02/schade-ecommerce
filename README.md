@@ -22,13 +22,14 @@ Full Stack E-Commerce Store with Content Management System using: Next.js 14 App
   - Implemented user interface for vewing billboards and products from each category, navigating each category using filters, adding items to the shopping cart and buying the products using Stripe.
 
 - Back-End Features:
-  - The admin dashboard serves as both CMS, Admin and API.
+  - The admin dashboard serves as both CMS, Admin and API. It is highly customisable and provides API endpoints to allow you to connect and create functionality for your own needs.
   - Store Manager which allows admin to control multiple stores from this single CMS.
   - Admin is able to create, update and delete billboards/categories/products/colours/sizes for each store.
   - Dashboard which allows admin to view orders/sales/revenue of each store.
   - Used Cloudinary to store media such as product images and billboards.
-  - Used Clerk Authentication for admin Authentication and Authorisation.
-  - Used Stripe checkout and webhooks for order checkout.
+  - Used Clerk Authentication for admin Authentication and Authorisation to ensure the user data remains secure.
+  - Used Stripe checkout and webhooks to automated processes like payment processes and order updates.
+  - Used MySQL, Prisma and PlanetScale to ensure efficient data storage and scalability, enabling backend to handle increased loads as the website grows.
 
 For DEMO, use [Stripe Testing Cards](https://stripe.com/docs/testing)
 
