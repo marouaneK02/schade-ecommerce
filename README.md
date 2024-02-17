@@ -19,7 +19,7 @@ Full Stack E-Commerce Store with Content Management System using: Next.js 14 App
 
 ## Features
 - Front-End Features:
-  - Implemented user interface for vewing billboards and products from each category, navigating each category using filters, adding items to the shopping cart and buying the products using Stripe.
+  - Implemented user interface for viewing billboards and products from each category, navigating each category using filters, adding items to the shopping cart and buying the products using Stripe.
 
 - Back-End Features:
   - The admin dashboard serves as both CMS, Admin and API. It is highly customisable and provides API endpoints to allow you to connect and create functionality for your own needs.
