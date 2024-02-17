@@ -27,6 +27,8 @@ Full Stack E-Commerce Store with Content Management System using: Next.js 14 App
   - Used Clerk Authentication for admin Authentication and Authorisation.
   - Used Stripe checkout and webhooks for order checkout.
 
+For DEMO, use [Stripe Testing Cards](https://stripe.com/docs/testing)
+
 </br>
 
 ## How to use schade locally
@@ -44,7 +46,7 @@ npx prisma generate
 npx prisma db push
 ```
 
-Lastly, run the development server (ADMIN must run first, then frontend store):
+Lastly, run the development server (Admin MUST RUN FIRST, then frontend store):
 
 ```bash
 npm run dev
